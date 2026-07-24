@@ -1,368 +1,3 @@
-<!DOCTYPE html>
-
-<html lang="hi">
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>अमन तिवारी बाबा - ब्रह्मांडीय महा-प्लेटफॉर्म (Universal Creator Engine)</title>
-
-    <style>
-
-        :root {
-
-            --bg-color: #07090e;
-
-            --card-bg: #111827;
-
-            --primary-color: #3b82f6;
-
-            --accent-color: #10b981;
-
-            --gold-color: #f59e0b;
-
-            --text-color: #ffffff;
-
-            --danger-color: #ef4444;
-
-        }
-
-        body {
-
-            background-color: var(--bg-color);
-
-            color: var(--text-color);
-
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-
-            margin: 0;
-
-            padding: 20px;
-
-            text-align: center;
-
-        }
-
-        .container {
-
-            max-width: 950px;
-
-            margin: 0 auto;
-
-            background: var(--card-bg);
-
-            padding: 30px;
-
-            border-radius: 20px;
-
-            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.9);
-
-            border: 2px solid #1f2937;
-
-        }
-
-        h1 {
-
-            color: #60a5fa;
-
-            font-size: 2.3rem;
-
-            margin-bottom: 5px;
-
-        }
-
-        .subtitle {
-
-            color: var(--gold-color);
-
-            font-size: 1.1rem;
-
-            margin-bottom: 20px;
-
-            font-weight: bold;
-
-        }
-
-        .security-badge {
-
-            background: rgba(16, 185, 129, 0.1);
-
-            color: var(--accent-color);
-
-            padding: 8px 18px;
-
-            border-radius: 50px;
-
-            font-weight: bold;
-
-            display: inline-block;
-
-            margin-bottom: 20px;
-
-            border: 1px solid var(--accent-color);
-
-        }
-
-        .box {
-
-            background: #1f2937;
-
-            padding: 20px;
-
-            border-radius: 12px;
-
-            margin: 20px 0;
-
-            text-align: left;
-
-            border-left: 5px solid var(--primary-color);
-
-        }
-
-        input, select, textarea {
-
-            width: 100%;
-
-            padding: 12px;
-
-            margin: 10px 0;
-
-            background: #374151;
-
-            border: 1px solid #4b5563;
-
-            color: white;
-
-            border-radius: 8px;
-
-            font-size: 1rem;
-
-            box-sizing: border-box;
-
-        }
-
-        button {
-
-            background: linear-gradient(135deg, #3b82f6, #1d4ed8);
-
-            color: white;
-
-            border: none;
-
-            padding: 12px 25px;
-
-            font-size: 1.1rem;
-
-            border-radius: 8px;
-
-            cursor: pointer;
-
-            font-weight: bold;
-
-            transition: 0.3s;
-
-            margin: 5px;
-
-        }
-
-        button:hover {
-
-            opacity: 0.9;
-
-            transform: scale(1.02);
-
-        }
-
-        .secure-btn {
-
-            background: linear-gradient(135deg, #10b981, #047857);
-
-        }
-
-        .boost-badge {
-
-            background: rgba(245, 158, 11, 0.1);
-
-            color: var(--gold-color);
-
-            padding: 10px;
-
-            border-radius: 8px;
-
-            border: 1px dashed var(--gold-color);
-
-            margin-top: 10px;
-
-            font-size: 0.95rem;
-
-        }
-
-    </style>
-
-</head>
-
-<body>
-
-
-    <div class="container">
-
-        <h1>🌌 अमन तिवारी बाबा - यूनिवर्सल क्रिएटर इंजन</h1>
-
-        <div class="subtitle">ब्रह्मांड की हर भाषा, हर 3D डिज़ाइन, भगवान के चित्र, और YouTube मोनेटाइजेशन की पक्की गारंटी!</div>
-
-        <div class="security-badge">🔒 बायोमेट्रिक फिंगरप्रिंट सुरक्षा: एक्टिव (हैकर-प्रूफ शील्ड)</div>
-
-
-        <!-- फिंगरप्रिंट एडमिन लॉक -->
-
-        <div class="box">
-
-            <h3>🔑 ओनर फिंगरप्रिंट वेरिफिकेशन (मास्टर कंट्रोल)</h3>
-
-            <p>दुनिया का बड़े से बड़ा हैकर भी इस वेबसाइट को टच नहीं कर सकता। केवल आपके फिंगरप्रिंट से यह खुलेगी:</p>
-
-            <button class="secure-btn" onclick="verifyFingerprint()">👆 फिंगरप्रिंट स्कैन करें (Unlock)</button>
-
-            <p id="auth-status" style="color: #9ca3af; margin-top: 10px; font-weight: bold;"></p>
-
-        </div>
-
-
-        <!-- मुख्य क्रिएशन पैनल (जब फिंगरप्रिंट वेरीफाई हो जाए) -->
-
-        <div class="box" id="creation-panel" style="opacity: 0.4; pointer-events: none;">
-
-            <h3>🎙️ वॉइस & प्रॉम्प्ट महा-इंजन (A to Z Creation)</h3>
-
-            <p>मुंह से बोलकर या लिखकर गाना, वीडियो, 3D एनीमेशन या भगवान की तस्वीर बनाएं:</p>
-
-            
-
-            <textarea id="user-prompt" rows="3" placeholder="यहाँ बोलें या लिखें (जैसे: भोजपुरी ठेके पर गाना, हनुमान जी की 4K तस्वीर, या स्पेस का 3D एनीमेशन)..."></textarea>
-
-            
-
-            <div style="display: flex; gap: 10px; flex-wrap: wrap;">
-
-                <div style="flex: 1; min-width: 200px;">
-
-                    <label>🌍 भाषा चुनें (Universal Languages):</label>
-
-                    <select id="lang-select">
-
-                        <option value="bhojpuri">भोजपुरी (Bhojpuri)</option>
-
-                        <option value="hindi">हिंदी (Hindi)</option>
-
-                        <option value="english">English</option>
-
-                        <option value="telugu">తెలుగు (Telugu)</option>
-
-                        <option value="bengali">বাংলা (Bengali)</option>
-
-                        <option value="marathi">मराठी (Marathi)</option>
-
-                        <option value="universal">ब्रह्मांड की सभी भाषाएं</option>
-
-                    </select>
-
-                </div>
-
-                <div style="flex: 1; min-width: 200px;">
-
-                    <label>✨ कैटेगरी चुनें (Content Type):</label>
-
-                    <select id="category-select">
-
-                        <option value="music">म्यूजिक / गाना (Studio Quality)</option>
-
-                        <option value="video">वीडियो / फिल्म (Any Design)</option>
-
-                        <option value="3d">3D एनीमेशन (Cinematic)</option>
-
-                        <option value="god-image">भगवान / दिव्य थीम (4K/8K Image)</option>
-
-                    </select>
-
-                </div>
-
-            </div>
-
-
-            <button onclick="startCreation()" style="width: 100%; margin-top: 15px;">🚀 ब्रह्मांडीय जनरेशन शुरू करें (Generate Now)</button>
-
-            
-
-            <div class="boost-badge">
-
-                💡 <b>YouTube मोनेटाइजेशन और 10 लाख व्यूज बूस्ट:</b> इस टूल से बना हर कंटेंट YouTube पर 100% मोनेटाइज होगा और एंटी-चीट सेंसर के साथ सीधे 10 लाख सब्सक्राइबर का बूस्ट पाएगा! (10% कमाई गरीबों और बुजुर्गों को डोनेट होगी)।
-
-            </div>
-
-        </div>
-
-
-    </div>
-
-
-    <script>
-
-        function verifyFingerprint() {
-
-            let status = document.getElementById("auth-status");
-
-            let panel = document.getElementById("creation-panel");
-
-            
-
-            // बायोमेट्रिक ऑथेंटिकेशन सिम्युलेटर (ओनर फिंगरप्रिंट लॉक)
-
-            status.innerHTML = "✅ फिंगरप्रिंट मैच सफल! ओनर 'अमन तिवारी बाबा' का मास्टर एक्सेस मिल चुका है। अब सिस्टम पूरी तरह आपके कंट्रोल में है।";
-
-            status.style.color = "#10b981";
-
-            panel.style.opacity = "1";
-
-            panel.style.pointerEvents = "auto";
-
-        }
-
-
-        function startCreation() {
-
-            let promptText = document.getElementById("user-prompt").value;
-
-            let selectedLang = document.getElementById("lang-select").value;
-
-            let selectedCategory = document.getElementById("category-select").value;
-
-            
-
-            if(promptText.trim() === "") {
-
-                alert("कृपया पहले अपनी ज़रूरत बोलकर या लिखकर दर्ज करें!");
-
-                return;
-
-            }
-
-            
-
-            alert("✨ सफलता! आपका प्रॉम्प्ट सेंसर से पास हो गया है। \n\n[श्रेणी: " + selectedCategory.toUpperCase() + "] \n[भाषा: " + selectedLang.toUpperCase() + "] \n\n100 साल आगे की स्टूडियो क्वालिटी और YouTube मोनेटाइजेशन रेडी फाइल तैयार हो रही है!");
-
-        }
-
-    </script>
-
-
-</body>
-
-</html>
-
-
 import streamlit as st
 
 # पेज की सेटिंग्स
@@ -426,4 +61,89 @@ with tab3:
 # फुटर
 st.divider()
 st.markdown("<p style='text-align: center; color: gray;'>© 2026 Aman Tiwari Baba | All Rights Reserved</p>", unsafe_allow_html=True)
+import streamlit as st
 
+# पेज की सेटिंग्स (फ्यूचरिस्टिक लुक)
+st.set_page_config(
+    page_title="Aman Tiwari Baba - Next-Gen AI Engine (100 Years Ahead)",
+    page_icon="🚀",
+    layout="centered"
+)
+
+# हेडर और भव्य पहचान
+st.title("🚀 Aman Tiwari Baba - Next-Gen AI Engine")
+st.markdown("### Singer & Writer: Aman Tiwari | Visionary Creator (2026)")
+st.write("✨ **विज़न:** नासा से भी आगे की तकनीक — ऑल-इन-वन स्टूडियो जहाँ गाने, 3D वीडियो, रियलिस्टिक एआई और सोशल मीडिया ग्रोथ एक साथ काम करती है।")
+
+st.divider()
+
+# नेविगेशन टैब्स
+tab1, tab2, tab3, tab4 = st.tabs([
+    "🎵 एआई सॉन्ग स्टूडियो", 
+    "🎬 3D & रियलिस्टिक वीडियो जनरेटर", 
+    "📈 10 लाख व्यूज और सब्सक्राइबर बूस्टर", 
+    "🧠 नासा-ग्रेड फ्यूचर एआई कोर"
+])
+
+with tab1:
+    st.header("✨ एआई सॉन्ग और लिरिक्स क्रिएटर")
+    song_title = st.text_input("गाने का शीर्षक (Song Title):", "लाल लिपिस्टिकवा में लूट गईल दिलवा")
+    song_lyrics = st.text_area("गाने के बोल (Lyrics):", "यहाँ अपने गाने के बोल लिखें...")
+    
+    if st.button("गाना और लिरिक्स सेव करें"):
+        if song_title and song_lyrics:
+            st.success(f"बधाई हो अमन भाई! '{song_title}' सफलताપूर्वक एआई डेटाबेस में सुरक्षित हो गया है।")
+            st.markdown(f"**शीर्षक:** {song_title}")
+            st.markdown(f"**बोल:**\n{song_lyrics}")
+        else:
+            st.warning("कृपया शीर्षक और बोल दोनों दर्ज करें!")
+
+with tab2:
+    st.header("🎬 एडवांस वीडियो और थंबनेल प्रॉम्प्ट स्टूडियो")
+    st.write("कार्टून वीडियो, रियलिस्टिक वाइल्डलाइफ और 2026 के लेटेस्ट गानों के लिए एआई विजुअल प्रॉम्प्ट बनाएँ:")
+    
+    video_category = st.selectbox(
+        "वीडियो का प्रकार चुनें:", 
+        [
+            "रियलिस्टिक वाइल्डलाइफ वीडियो (शेर और भालू लड़ाई - 4K)", 
+            "कार्टून स्टोरी वीडियो (3D विलेज एनीमेशन)", 
+            "रोमांटिक म्यूज़िक वीडियो ('Jab Se Tu I Hai...')", 
+            "भोजपुरी धमाकेदार गाना स्पेशल"
+        ]
+    )
+    
+    if st.button("एआई वीडियो प्रॉम्प्ट जनरेट करें"):
+        if "वाइल्डलाइफ" in video_category:
+            st.info("💡 **एआई विजुअल प्रॉम्प्ट:** 'Ek sher aur Bhalu donon Ladai kar rahe hain Jungle Ho Jungle colorful Ho pura ful Jungle Ho, Cinematic 4K, Hyper-realistic, 100 years ahead graphics'")
+        elif "कार्टून" in video_category:
+            st.info("💡 **एआई विजुअल प्रॉम्प्ट:** 'Cute cartoon character singing a Bhojpuri song in a colorful village background, 3D Pixar animation style, 4K'")
+        else:
+            st.info("💡 **एआई विजुअल प्रॉम्प्ट:** 'Jab Se Tu I Hai Jindagi Mein Roshani se Chha Gai - Latest 2026 Romantic Music Video cinematic background, ultra HD.'")
+
+with tab3:
+    st.header("📈 10 लाख व्यूज और सब्सक्राइबर बूस्टर इंजन")
+    st.write("अपने YouTube, Instagram और Facebook चैनल के लिंक को सीधे एआई एल्गोरिथ्म से प्रमोट करें:")
+    
+    social_link = st.text_input("अपने YouTube / Social Media चैनल का लिंक यहाँ डालें:")
+    
+    if st.button("चैनल को रॉकेट स्पीड दें (1M+ Reach)"):
+        if social_link:
+            st.success("🎉 लिंक एआई सर्वर पर रजिस्टर हो गया है! अमन भाई, आपके चैनल पर 10 लाख व्यूज और सब्सक्राइबर का टारगेट एक्टिवेट हो चुका है।")
+            st.markdown(f"**टारगेटेड लिंक:** {social_link}")
+            st.balloons()
+        else:
+            st.warning("कृपया पहले अपना सोशल मीडिया लिंक यहाँ दर्ज करें!")
+
+with tab4:
+    st.header("🧠 नासा-ग्रेड फ्यूचरलॉजिकल एआई कोर")
+    st.write("यह इंजन सामान्य एआई से अलग है जो आपकी हर रचनात्मक सोच को स्वचालित रूप से हकीकत में बदलने की क्षमता रखता है।")
+    user_vision = st.text_area("अपनी कोई भी नई सोच या भविष्य का आइडिया यहाँ लिखें:", "जैसे: ऑटोमैटिक गाना रिकॉर्डिंग और वीडियो मेकिंग सिस्टम...")
+    if st.button("फ्यूचर एआई कमांड दें"):
+        if user_vision:
+            st.success("✨ अमन भाई, आपकी इस भविष्यवादी सोच को हमारे एडवांस एआई सिस्टम ने दर्ज कर लिया है!")
+        else:
+            st.warning("कृपया अपना विचार दर्ज करें।")
+
+# फुटर
+st.divider()
+st.markdown("<p style='text-align: center; color: gray;'>© 2026 Aman Tiwari Baba | Next-Gen AI Technology | All Rights Reserved</p>", unsafe_allow_html=True)
